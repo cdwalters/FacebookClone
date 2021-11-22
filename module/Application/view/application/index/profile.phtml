@@ -3,16 +3,18 @@ echo 'profile view';
 
 
 ?>
-<div class="jumbotron">
 
-<h1 class="display-4">
+<div class="container-fluid">
 
-        <?= $user['firstName'] . '&nbsp' . $user['lastName']?>
 
-</h1>
+<img class="rounded-circle" alt="100x100" style="width: 168px; height: 168px;" src="<?= $user['profileImage']?>">
 
-<img alt="" src="<?= $user['profileImage']?>">
+<span class="pl-5">
 
+<?= $user['firstName'] . '&nbsp' . $user['lastName']?>
+
+
+</span>
 
 
 </div>
