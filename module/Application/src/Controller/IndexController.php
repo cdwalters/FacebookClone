@@ -9,6 +9,7 @@ use Laminas\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    //
     public $users = [];
     protected function buildUser($data = [])
     {
