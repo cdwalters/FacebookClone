@@ -1,20 +1,52 @@
 <?php
 echo 'profile view';
-
-
 ?>
 
-<div class="container-fluid">
+<link rel="stylesheet" href="css/styles.css">
 
-
-<img class="rounded-circle" alt="100x100" style="width: 168px; height: 168px;" src="<?= $user['profileImage']?>">
-
-<span class="pl-5">
-
-<?= $user['firstName'] . '&nbsp' . $user['lastName']?>
-
-
-</span>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="fb-profile-block">
+                <div class="fb-profile-block-thumb cover-container">
+                
+                <img src="<?= $user['coverImage']?>" >
+                
+                </div>
+                <div class="profile-img">
+                    <a href="#">
+                        <img src="<?= $user['profileImage']?>" alt="" title="">        
+                    </a>
+                </div>
+                <div class="profile-name">
+                    <h2>
+                    <?= $user['firstName'] . '&nbsp' . $user['lastName']?>
+                    </h2>
+                </div>
+                
+                <div class="fb-profile-block-menu">
+                    <div class="block-menu">
+                        <ul>
+                            <li><a href="#">Timeline</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">Photos</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                    </div>
+                    <div class="block-menu">
+                        <ul>
+                            <li><a href="#">Timeline</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">Photos</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </div>
