@@ -1,7 +1,3 @@
-<?php
-echo 'profile view';
-?>
-
 <link rel="stylesheet" href="css/styles.css">
 
 <div class="container">
@@ -10,7 +6,7 @@ echo 'profile view';
             <div class="fb-profile-block">
                 <div class="fb-profile-block-thumb cover-container">
                 
-                <img src="<?= $user['coverImage']?>" >
+                <img src="<?= $user['coverImage']?>" width="1110" height="312" >
                 
                 </div>
                 <div class="profile-img">
@@ -35,13 +31,6 @@ echo 'profile view';
                         </ul>
                     </div>
                     <div class="block-menu">
-                        <ul>
-                            <li><a href="#">Timeline</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">Friends</a></li>
-                            <li><a href="#">Photos</a></li>
-                            <li><a href="#">More...</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -49,4 +38,3 @@ echo 'profile view';
     </div>
 </div>
 
-</div>

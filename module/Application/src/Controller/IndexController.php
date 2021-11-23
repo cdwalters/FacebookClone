@@ -47,7 +47,7 @@ class IndexController extends AbstractActionController
         $data['firstName'] = 'Evan';
         $data['lastName'] = 'Alexander';
         $data['profileImage'] = '/img/239298557_2628758764097204_7736176513223063324_n.jpg';
-        $data['coverImage'] = '/img/w1Pprh.jpg';
+        $data['coverImage'] = '/img/911.jpg';
         $data['friends'] = [
                             'Patty Johnson', 
                             'Misty Alexander', 
