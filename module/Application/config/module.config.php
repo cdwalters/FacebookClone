@@ -34,7 +34,7 @@ return [
             'application.friends' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/friends',
+                    'route'    => '/application/friends[/:param]',
                     'defaults' => [
                         'controller' => Controller\FriendsController::class,
                         'action'     => 'index',

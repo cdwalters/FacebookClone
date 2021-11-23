@@ -43,7 +43,7 @@ class IndexController extends AbstractActionController
         //var_dump($this->params('param'));
         //var_dump($this->getRequest()->getQuery());
         $rowSet = new UserRowset();
-        //var_dump($rowSet->fetchResult());
+        var_dump($rowSet->fetchResult());
         //var_dump($rowSet->fetchById(2));
         $this->layout()->user = $this->user->getArrayCopy();
         return new ViewModel(['user' => $this->user->getArrayCopy(),]);
