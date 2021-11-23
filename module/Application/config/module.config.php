@@ -31,11 +31,23 @@ return [
                     ],
                 ],
             ],
+            'application.friends' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/friends',
+                    'defaults' => [
+                        'controller' => Controller\FriendsController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+            
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\FriendsController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
