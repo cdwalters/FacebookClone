@@ -24,7 +24,7 @@ return [
             'application' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/application/profile[/:param]',
+                    'route'    => '/application/profile[/:userId]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'profile',
