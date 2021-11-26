@@ -8,6 +8,7 @@ use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
 use Application\Model\UserRow;
 use Application\Model\UserRowset;
+use PhpParser\Node\Stmt\Foreach_;
 class IndexController extends AbstractActionController
 {
     
@@ -16,12 +17,12 @@ class IndexController extends AbstractActionController
     public function __construct()
     {
 
-        $this->user = new UserRow($this->evan());
+        //$this->user = new UserRow($this->evan());
     }
 
     public function indexAction()
     {
-        
+        $this->user = new UserRow($this->evan());
         
         // build the user data and populate the class property $this->user
        // $this->buildUser($this->evan());
@@ -40,18 +41,35 @@ class IndexController extends AbstractActionController
     }
     public function profileAction()
     {
+        
         //var_dump($this->params('userId'));
-        $userId = $this->params('userId');
-        var_dump($this->getRequest()->getQuery());
+        $userId = (int) $this->params('userId');
+        var_dump($userId);
         $rowSet = new UserRowset();
         //var_dump($rowSet->fetchResult());         
           //var_dump($rowSet->fetchById(2));
-         $this->layout()->user = $this->user->getArrayCopy();
-        return new ViewModel([
-            'user' => $this->user->getArrayCopy(),
+         //$this->layout()->user = $this->user->getArrayCopy();
+         
+         $rowSet = $rowSet->fetchResult();
+         
+         foreach ($rowSet as $row)
+         {
+           // var_dump($row);
+            if($row['userId'] === $userId)
+            { 
+                $user = new UserRow($row);
+                return new ViewModel(['user' => $user->getArrayCopy()]);
+            }
+         }
+         
+//         return new ViewModel([
+//             'user' => $this->user->getArrayCopy(),
             
-         ]);
+//          ]);
+        
     }
+    
+    
     public function friendsAction()
     {
         $rowSet = new UserRowset();
