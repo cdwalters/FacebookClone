@@ -48,22 +48,59 @@ class UserRowset
                 'friends' => [2, 4, 6,],
             ],
             2 => [
-                
+                'userId' => 3,
+                'userName' => 'malex',
+                'firstName' => 'Misty',
+                'lastName' =>  'Alexander',
+                'profileImage' => $this->pPath . 'misty.jpg',
+                'coverImage' => $this->cPath . 'misty.jpg',
+                'friends' => [4, 5, 7,],
             ],
             3 => [
-                
+                'userId' => 4,
+                'userName' => 'jsmith',
+                'firstName' => 'Joey',
+                'lastName' => 'Smith',
+                'profileImage' => $this->pPath . 'jsmith.jpg',
+                'coverImage' => $this->cPath . 'jsmith.jpg',
+                'friends' => [2, 1, 3,],
+            
             ],
             4 => [
-                
+                'userId' => 5,
+                'userName' => 'dsmith',
+                'firstName' => 'Dalton',
+                'lastName' => 'Smith',
+                'profileImage' => $this->pPath . 'dsmith.jpg',
+                'coverImage' => $this->cPath . 'dsmith.jpg',
+                'friends' => [4, 1, 2,],
             ],
             5 => [
-                
+                'userId' => 6,
+                'userName' => 'asmith5904',
+                'firstName' => 'Aaron',
+                'lastName' => 'Smith',
+                'profileImage' => $this->pPath . 'asmith.jpg',
+                'coverImage' => $this->cPath . 'asmith.jpg',
+                'friends' => [1, 5, 4,],
             ],
             6 => [
-                
+                'userId' => 7,
+                'userName' => 'debbie',
+                'firstName' => 'Debbie',
+                'lastName' => 'Smith',
+                'profileImage' => $this->pPath . 'debbie.jpg',
+                'coverImage' => $this->cPath . 'debbie.jpg',
+                'friends' => [2, 3, 4,],
             ],
             7 => [
-                
+                'userId' => 8,
+                'userName' => 'pro',
+                'firstName' => 'Eric',
+                'lastName' => 'Christianson',
+                'profileImage' => $this->pPath . 'eric.jpg',
+                'coverImage' => $this->cPath . 'eric.jpg',
+                'friends' => [2, 6, 1,],
             ],
         ];
         return $data;

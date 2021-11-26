@@ -6,17 +6,17 @@
             <div class="fb-profile-block">
                 <div class="fb-profile-block-thumb cover-container">
                 
-                <img src="<?= $user['coverImage']?>" width="1110" height="312" >
+                <img src="<?= $this->user['coverImage']?>" width="1110" height="312" >
                 
                 </div>
                 <div class="profile-img">
                     <a href="#">
-                        <img src="<?= $user['profileImage']?>" alt="" title="">        
+                        <img src="<?= $this->user['profileImage']?>" alt="" title="">        
                     </a>
                 </div>
                 <div class="profile-name">
                     <h2>
-                    <?= $user['firstName'] . '&nbsp' . $user['lastName']?>
+                    <?= $this->user['firstName']; '&nbsp' . $this->user['lastName']?>
                     </h2>
                 </div>
                 

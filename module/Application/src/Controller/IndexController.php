@@ -8,7 +8,6 @@ use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
 use Application\Model\UserRow;
 use Application\Model\UserRowset;
-
 class IndexController extends AbstractActionController
 {
     
@@ -16,7 +15,8 @@ class IndexController extends AbstractActionController
     public $user;
     public function __construct()
     {
-        $this->user= new UserRow($this->evan());
+
+        $this->user = new UserRow($this->evan());
     }
 
     public function indexAction()
@@ -40,13 +40,17 @@ class IndexController extends AbstractActionController
     }
     public function profileAction()
     {
-        //var_dump($this->params('param'));
-        //var_dump($this->getRequest()->getQuery());
+        //var_dump($this->params('userId'));
+        $userId = $this->params('userId');
+        var_dump($this->getRequest()->getQuery());
         $rowSet = new UserRowset();
-        //var_dump($rowSet->fetchResult());
-        //var_dump($rowSet->fetchById(2));
-        $this->layout()->user = $this->user->getArrayCopy();
-        return new ViewModel(['user' => $this->user->getArrayCopy(),]);
+        //var_dump($rowSet->fetchResult());         
+          //var_dump($rowSet->fetchById(2));
+         $this->layout()->user = $this->user->getArrayCopy();
+        return new ViewModel([
+            'user' => $this->user->getArrayCopy(),
+            
+         ]);
     }
     public function friendsAction()
     {
